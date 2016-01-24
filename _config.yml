@@ -1,0 +1,29 @@
+# Site settings
+title: J-Slow
+description: > 
+  from Paris
+  based in London
+url: 'https://soundcloud.com/j-slow' 
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+
+author:
+  name: 'J-Slow'
+  facebook: JeuneSlow
+  soundcloud: j-slow
+  twitter_username: JeuneSlow
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: pygments
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
