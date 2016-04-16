@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -17,8 +19,8 @@
         <link rel="stylesheet" href="{{ "css/normalize.css" | prepend: site.baseurl }}">
         <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
 
-        
-        
+
+
 
         <script language="javascript" type="text/javascript">
             if (window != top) top.location.href = location.href;
@@ -31,47 +33,15 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-            
+
 
             <div id="main" class="clearfix">
-                <ul id="topnav">
-                    <h1><a href="/">J-Slow</a></h1>
+              {% include header.html %}
 
-                    <li><a class="bio" href="/biography">Biography</a></li>
-                    <li><a class="music" href="/music">Music</a></li>
-                    <li><a class="videos" href="/posts">Videos</a></li>
-                    <li><a class="tour-dates" href="/tour-dates">Tour Dates</a></li>
-                    <li>
-                        <a href="#">Connect</a>
+              {{content}}
 
-                        <ul>
-                            <li><a href="http://twitter.com/JeuneSlow" target="_blank">Twitter</a></li>
-                            <li><a href="https://www.facebook.com/JeuneSlow" target="_blank">Facebook</a></li>
-                            <li><a href="http://soundcloud.com/j-slow" target="_blank">Soundcloud</a></li>
-                            <!--<li><a href="http://drakeofficial.tumblr.com">Tumblr</a></li>-->
-                            
-                        </ul>
-                    </li>
-                </ul>
-
-                <div id="content" class="clearfix">
-                
-<div id="content">
-<div class="valign">
-  <div class="feature">
-    <div class="vid-wrap">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/n1lOajmUcFw" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-</div>
-</div>
-
-                </div>
-
-                
             </div>
-            {footer}
+            {% include footer.html %}
 
 
         </div>
@@ -98,71 +68,4 @@
             $(window).resize();
         });
     </script>
-    
-
-<script>
-
-$(document).ready( function(){
-  var vid_width = 800;
-  var vid_height = 450;
-  var iframe_size = 'large';
-  
-  var autoplay = 1;
-  
-
-  $(window).resize( function(){
-    if ( $(window).height() < 660 ){
-      wh = 660;
-    } else {
-      wh = $(window).height();
-    }
-
-    
-    if ( $('#content').height() > wh ){
-      wh = $('#content').height() + 48;
-      $("#body-wrap").css('height', 'auto');
-    }
-    console.log(wh);
-    $('#main').height( wh - 48 );
-
-    if ( $(window).width() < 1160){
-
-      if ( !$('.feature .vid-wrap iframe').hasClass('med') ){
-
-        vid_width = 600;
-        vid_height = 340;
-
-        iframe_size = 'med';
-
-        if ($('.feature .vid-wrap iframe.med').length == 0){
-          $('.feature .vid-wrap').html('<iframe class="med" src="https://www.youtube.com/embed/n1lOajmUcFw" width="'+vid_width+'" height="'+vid_height+'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-          $('#content').css('width', 600);
-        }
-      }
-
-
-    } else {
-
-      if ( !$('.feature .vid-wrap iframe').hasClass('large') ){
-      vid_width = 800;
-      vid_height = 450;
-
-      if ($('.feature .vid-wrap iframe.large').length == 0){
-        $('.feature .vid-wrap').html('<iframe class="large" src="https://www.youtube.com/embed/n1lOajmUcFw" width="'+vid_width+'" height="'+vid_height+'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-
-        $('#content').attr('style', '');
-      }
-      }
-    }
-
-    autoplay = 0;
-  });
-  $(window).resize();
-
-});
-</script>
-
-
-
 </html>
