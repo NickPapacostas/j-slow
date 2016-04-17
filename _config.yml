@@ -1,6 +1,6 @@
 # Site settings
 title: J-Slow
-baseurl: '/'
+baseurl: '/j-slow'
 
 # Build settings
 markdown: kramdown
