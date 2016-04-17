@@ -129,7 +129,6 @@ body {
   position: fixed;
 }
 #body-wrap #main #topnav h1 {
-  background: url('images/drake-160x173.png') no-repeat;
   margin: 0 0 1em 0;
 }
 #body-wrap #main #topnav h1 a {
@@ -290,7 +289,7 @@ body {
 }
 
 .content {
-  padding-top: 30%;
+  padding-top: 10%;
 }
 
 .biography .text {
@@ -307,6 +306,11 @@ body {
 .biography img {
   width: 50%;
   margin-left: 20px;
+}
+
+.videos {
+  max-height: 800px;
+  max-width: 1100px;
 }
 
 
