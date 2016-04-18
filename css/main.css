@@ -281,20 +281,14 @@ body {
 }
 
 
-
-
-.biography {
-  margin-top: 20%;
-
-}
-
 .content {
   padding-top: 10%;
 }
 
 .biography .text {
   color: white;
-  padding-left: 10%;
+  padding-top: 10%;
+  text-align: center;
   line-height: 1.5;
   margin-top: 10px;
 }
@@ -305,7 +299,6 @@ body {
 
 .biography img {
   width: 50%;
-  margin-left: 20px;
 }
 
 .videos {
@@ -314,8 +307,27 @@ body {
 }
 
 .index {
-  text: uppercase;
+  text-transform: uppercase;
+  vertical-align: center;
 }
+
+.index .ep-cover {
+  max-width: 35%;
+  border: 1;
+  float: left;
+}
+
+.index > .text {
+  padding-top: 10%;
+  padding-left: 40%;
+  color: white;
+  text-align: center;
+}
+
+.email {
+  padding-top: 20px;
+}
+
 
 .footer {
   margin-top: 90%;
