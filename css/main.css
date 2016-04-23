@@ -285,9 +285,22 @@ body {
   padding-top: 10%;
 }
 
-.biography .text {
+.biography .lang-toggle {
+  text-align: center;
+  border: 1px solid white;
   color: white;
-  padding-top: 10%;
+  margin-left: 90%;
+}
+
+.biography .active {
+  font-weight: bold
+}
+
+
+.biography .text {
+  text-transform: lowercase;
+  color: white;
+  padding-top: 5%;
   text-align: center;
   line-height: 1.5;
   margin-top: 10px;
@@ -326,6 +339,10 @@ body {
 
 .email {
   padding-top: 20px;
+}
+
+#email-form div {
+  padding: 8px;
 }
 
 

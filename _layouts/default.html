@@ -7,25 +7,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>J-Slow</title>
-        <meta name="description" content="">
-        <!--<meta name="viewport" content="width=1200, initial-scale=1">-->
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
-        <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
-
-
-
-        <script language="javascript" type="text/javascript">
-            if (window != top) top.location.href = location.href;
-        </script>
-    </head>
+    {% include head.html %}
     <body class="">
 
         <div id="body-wrap" class="videos index">
@@ -47,7 +29,6 @@
         </div>
     </body>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>
         $(document).ready( function(){
             $('#topnav li a').click( function(e){
@@ -66,56 +47,6 @@
                 }
             });
             $(window).resize();
-        });
-
-        var request
-        $("#email-form").submit(function(event){
-            // Abort any pending request
-            if (request) {
-                request.abort();
-            }
-            // setup some local variables
-            var $form = $(this);
-
-            // Let's select and cache all the fields
-            var $inputs = $form.find("input, select, button, textarea");
-
-            // Serialize the data in the form
-            var serializedData = $form.serialize();
-            // Let's disable the inputs for the duration of the Ajax request.
-            // Note: we disable elements AFTER the form data has been serialized.
-            // Disabled form elements will not be serialized.
-            $inputs.prop("disabled", true);
-
-            // Fire off the request to /form.php
-            request = $.ajax({
-                url: "https://script.google.com/macros/s/AKfycby8K72QJAJOy1npLZhffyWgk08qzpR2dm-U741zgIqR9c6NePg/exec",
-                type: "post",
-                data: serializedData
-            });
-
-            // Callback handler that will be called on success
-            request.fail(function (jqXHR, textStatus, errorThrown){
-                // Log the error to the console
-                console.error(
-                    "The following error occurred: "+
-                    textStatus, errorThrown
-                );
-            });
-
-            // Callback handler that will be called regardless
-            // if the request failed or succeeded
-            request.always(function () {
-                // Reenable the inputs
-                $inputs.prop("disabled", false);
-            });
-
-            // Prevent default posting of form
-
-            $form.hide();
-            $('new-ep-wrapper').show()
-
-            event.preventDefault();
         });
 
     </script>
