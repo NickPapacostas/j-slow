@@ -26,3 +26,12 @@ translations:
         Il nous délivre son premier ep “New Wave” le 10 mars 2014 distribué par le label Believe sur toutes les plateformes de téléchargement légale.
         Après un an passé à Londres au côté de son ami de toujours SrabiMachine installé labas depuis plusieurs années que le Jeune Slow nous revient avec un nouvel ep “Cash Mire” entièrement produit par son acolyte. La sortie du projet est prevue le 10 Mai prochain.
 
+
+collections:
+  photos:
+
+photos:
+  - path: 'photos/photo1.jpg'
+  - path: 'photos/photo2.jpg'
+  - path: 'photos/photo3.jpg'
+  - path: 'photos/photo4.jpg'

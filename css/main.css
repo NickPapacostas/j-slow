@@ -334,7 +334,7 @@ body {
   padding-left: 40%;
   color: white;
   text-align: center;
-}
+}1
 
 .email {
   padding-top: 20px;
@@ -348,6 +348,49 @@ body {
 .footer {
   margin-top: 90%;
 }
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* or space-around */
+}
+
+.photos a {
+  display: inline-block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 60em) {
+  a {
+    width: calc(50% - 6px);
+  }
+}
+
+.photos a:hover img {
+  transform: scale(1.15);
+}
+
+.photos figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.photos figcaption {
+  margin-top: 15px;
+}
+
+.photos img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+
+/*END CUSTOM STYLES*/
 
 .ir {
   background-color: transparent;
