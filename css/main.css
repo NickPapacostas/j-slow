@@ -320,18 +320,16 @@ body {
 
 .index {
   text-transform: uppercase;
-  vertical-align: center;
+  text-align: center;
 }
 
 .index .ep-cover {
-  max-width: 55%;
+  max-width: 60%;
   border: 1;
-  float: left;
 }
 
 .index > .text {
   padding-top: 10%;
-  padding-left: 40%;
   color: white;
   text-align: center;
 }1
