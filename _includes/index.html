@@ -20,12 +20,13 @@
   var request
   $("#email-form").submit(function(event){
     // Abort any pending request
+    $("#hidden-ep-link").show();
     if (request) {
       request.abort();
     }
     // setup some local variables
     var $form = $(this);
-
+    $form.hide();
     // Let's select and cache all the fields
     var $inputs = $form.find("input, select, button, textarea");
 
@@ -61,7 +62,6 @@
 
     request.success(function(r){
       $form.hide();
-      $("#hidden-ep-link").show();
     });
 
     // Prevent default posting of form
