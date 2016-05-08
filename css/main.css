@@ -166,6 +166,7 @@ body {
   top: -1px;
   left: -1px;
   font-size: 14px;
+  color: white;
 }
 #body-wrap #main #topnav ul {
   padding: 0 0 0 26px;
@@ -347,13 +348,16 @@ body {
   text-align: center;
 }
 
-#hidden-ep-link,
-#hidden-ep-link a,
-#hidden-ep-link a:link,
-#hidden-ep-link a:visited,
-#hidden-ep-link a:hover,
-#hidden-ep-link a:active {
+
+a,
+a:link,
+a:visited,
+a:active {
     color: white;
+}
+
+a:hover{
+  color: black;
 }
 
 .email {
