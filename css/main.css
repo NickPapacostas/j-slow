@@ -135,8 +135,9 @@ body {
   display: block;
   width: 160px;
   padding-top: 200px;
+  padding-bottom: 40px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 35px;
   letter-spacing: 0px;
   color: white;
   text-decoration: none;
@@ -149,7 +150,7 @@ body {
   font-size: 14px;
   font-family: "HelveticaNeue-Light", Helvetica, Arial, serif;
   text-decoration: none;
-  color: white;
+  color: black;
   text-transform: uppercase;
   line-height: 22px;
 }
@@ -183,16 +184,15 @@ body {
 
 #body-wrap #footer {
   position: absolute;
-  color: white;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  color: black;
+  right: 0;
+  width: 90%;
   height: 48px;
   line-height: 48px;
-  text-align: left;
+  text-align: right;
   font-size: 13px;
 }
-#body-wrap #footer span {
+#footer span {
   padding: 16px 25px;
 }
 #body-wrap.home #main #content {
@@ -292,6 +292,10 @@ body {
   margin-left: 90%;
 }
 
+.lang-toggle span {
+  cursor: pointer;
+}
+
 .biography .active {
   font-weight: bold
 }
@@ -299,18 +303,23 @@ body {
 
 .biography .text {
   color: white;
-  padding-top: 5%;
   text-align: center;
   line-height: 1.5;
   margin-top: 10px;
 }
 
+.biography .title {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
 .biography .image-wrapper{
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .biography img {
-  width: 50%;
+  width: 80%;
 }
 
 .videos {
@@ -351,10 +360,6 @@ body {
   padding: 8px;
 }
 
-
-.footer {
-  margin-top: 90%;
-}
 
 .photos {
   display: flex;
