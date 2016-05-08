@@ -10,10 +10,13 @@
       </form>
     </div>
   <div id="hidden-ep-link">
+    <div>Download Here: </div>
+    <a href="http://www.mediafire.com/download/0xm5p9ihyb2dqfb/Cash_Mire_EP.zip" target="_blank">Cash Mire Ep</a>
   </div>
 </div>
 
 <script>
+  $("#hidden-ep-link").hide();
   var request
   $("#email-form").submit(function(event){
     // Abort any pending request
@@ -58,11 +61,7 @@
 
     request.success(function(r){
       $form.hide();
-      var iframe = document.createElement('iframe');
-      iframe.src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/217191694%3Fsecret_token%3Ds-wmtv4&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false";
-      iframe.width = "100%"
-      iframe.height = "450"
-      document.getElementById("hidden-ep-link").appendChild(iframe);
+      $("#hidden-ep-link").show();
     });
 
     // Prevent default posting of form
