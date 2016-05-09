@@ -301,6 +301,10 @@ body {
   cursor: pointer;
 }
 
+.biography a {
+  padding-top: 15px;
+}
+
 .biography .active {
   font-weight: bold
 }
