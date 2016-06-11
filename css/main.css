@@ -247,7 +247,6 @@ body {
   #lightbox .text {padding-left: 200px;}
 }
 
-
 @media(max-width:940px) {
 #lightbox.open .popup { top: 30px; }
 #lightbox .popup { width: 300px; height: auto; margin-left: -150px; margin-top: 30px; text-align: center; }
