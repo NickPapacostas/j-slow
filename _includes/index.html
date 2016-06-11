@@ -15,6 +15,21 @@
   </div>
 </div>
 
+
+<div id="lightbox"> <a href="#" class="close" onclick="return closeLightbox()">X</a>
+  <div class="popup"> <a href="https://itun.es/fr/O_K1cb" target="_blank"><img src="ep-cover.jpeg" width="563" height="559" class="cover"  /></a>
+    <div class="text">
+      <h1>New EP Available</h1>
+      <a href="https://itun.es/fr/O_K1cb" target="_blank" title="Cashmire EP on iTunes"><img src="http://static.tumblr.com/wvzujvn/UAlo1mtso/btn-itunes.png" width="151" height="54" class="button"  alt="Cashmire EP on iTunes" /></a>
+
+      <a href="https://open.spotify.com/album/5bFmwEnquShVUoqGavZKBW" target="_blank" class="release" title="Cashmire EP on Spotify" ><img src="http://static.tumblr.com/wvzujvn/kXNo1mu6m/btn-spotify.png" width="151" height="54" class="button" alt="Cashmire EP on Spotify"   /></a>
+
+      <a href="http://www.deezer.com/album/13288079" target="_blank" title="Cashmire EP on Deezer" id="deezer-logo"><img src="photos/deezer-logo2.png" width="161" height="54" class="button" alt="Cashmire EP on Deezer" /></a>
+    </div>
+  </div>
+</div>
+
+
 <script>
   $("#hidden-ep-link").hide();
   var request
@@ -70,4 +85,23 @@
     event.preventDefault();
   });
 
+</script>
+
+
+<script>
+  function openLightbox() {
+    console.log('opening ya boi')
+    if(lightbox.className.indexOf('open') == -1) {
+     lightbox.className += ' open';
+    }
+    return false;
+  }
+  function closeLightbox() {
+    if(lightbox.className.indexOf('open') > -1) {
+     lightbox.className = lightbox.className.replace(/ ?open/, '');
+   }
+   return false;
+  }
+    var lightbox = document.querySelector('#lightbox');
+    openLightbox();
 </script>
