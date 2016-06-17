@@ -1,0 +1,31 @@
+---
+layout: default
+title: News
+---
+
+
+<div class="content" class="clearfix">
+  <div class="news">
+    <div class="events">
+      <a class="next-concert" href="#" >
+        Prochain concert
+      </a>
+      <a href="https://www.facebook.com/events/1578065265827332" target="_blank"><img class="next-concert-image hidden" src="photos/next-concert.jpeg" /></a>
+    </div>
+
+    <div class="interviews">
+      <a href="http://oneyard.com/magazine/j-slow/" target="_blank">dernière interview</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.next-concert-image').hide();
+  $(document).ready(function(){
+    $('.next-concert').click(function(event){
+      $('.next-concert-image').removeClass("hidden");
+      $('.next-concert-image').toggle();
+    })
+  })
+
+</script>

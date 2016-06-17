@@ -420,6 +420,12 @@ a:hover{
   padding: 8px;
 }
 
+.news {
+  font-size: 2.5em;
+  line-height: 2.5em;
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
 
 /* Photos */
 .photos {
